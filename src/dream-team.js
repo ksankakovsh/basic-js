@@ -27,13 +27,13 @@ function createDreamTeam(members){
   }
   let arrNames = []; 
   let result = '';
-     members.map(item => {
-      if (isStr(item)) {
-         arrNames.push(item);
-      } 
-     });
-     
-     result += arrNames.map(element => createFirstLetter(element)); 
+       members.forEach(item => {
+        if (isStr(item)) {
+           arrNames.push(item);
+        } 
+       });
+       
+       result += arrNames.map(element => createFirstLetter(element)); 
      return result.split(',').sort().join('')
   }
 
